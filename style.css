@@ -88,8 +88,15 @@ body {
   box-shadow: 5px 5px 0px var(--crl-gray-950);
 }
 
+@media screen and (min-width: 48em) {
+  .course-card{
+    max-inline-size: 25rem;
+  }
+}
+
 .course-card__image {
   border-radius: 1rem;
+  width: 100%;
 }
 
 .course-card__badge {
