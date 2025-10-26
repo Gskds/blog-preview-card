@@ -1,0 +1,119 @@
+:root {
+  --crl-yellow: hsl(47, 88%, 63%);
+  --crl-white: hsl(0, 0%, 100%);
+  --crl-gray-500: hsl(0, 0%, 42%);
+  --crl-gray-950: hsl(0, 0%, 7%);
+  
+  --fw-regular: 500;
+  --fw-bold: 900;
+}
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+p,
+figure {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+figure {
+  max-width: 100%;
+  display: block;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Utility */
+.flow > * + * {
+  margin-top: 1rem;
+}
+
+/* Typography */
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+}
+
+body {
+  background-color: var(--crl-yellow);
+  font-family: "Figtree", sans-serif;
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+h1:hover,
+h1:focus-visible {
+  cursor: pointer;
+  color: var(--crl-yellow);
+}
+
+p {
+  color: var(--crl-gray-500);
+}
+
+/* Layout */
+body {
+  display: grid;
+  place-items: center;
+}
+
+.course-card {
+  background-color: var(--crl-white);
+  border-radius: 1rem;
+  max-inline-size: 20rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+  border: 1px solid var(--crl-gray-950);
+  box-shadow: 5px 5px 0px var(--crl-gray-950);
+}
+
+.course-card__image {
+  border-radius: 1rem;
+}
+
+.course-card__badge {
+  background-color: var(--crl-yellow);
+  font-weight: var(--fw-bold);
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+}
+
+.course-card__meta {
+  color: var(--crl-gray-950);
+}
+
+.course-card__footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author__avator {
+  width: 2rem;
+}
+
+.author__name {
+  font-weight: var(--fw-bold);
+}
